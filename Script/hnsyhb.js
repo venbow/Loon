@@ -10,6 +10,7 @@ if ($request.url.indexOf(path1) != -1){
 }
 if ($request.url.indexOf(path2) != -1){
 	obj.result["vip_status"] = key;
+	obj.result["allow_guest"] = 1;
 }
 
 $done({body: JSON.stringify(obj)});
