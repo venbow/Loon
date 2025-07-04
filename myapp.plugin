@@ -16,5 +16,14 @@ http-response ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubs
 # > Termius解锁Premium
 http-response ^https?:\/\/api\.termius\.com\/api\/v\d\/bulk\/account\/ script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Termius/JS/Termius.js, requires-body=true, timeout=60, tag=Termius解锁Premium
 
+# Javdb
+# http-response ^https?:\/\/.*\/api\/v1\/users script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javbdvipcrack.js, requires-body=true, timeout=60, tag=Javdb解锁
+http-response ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js, requires-body=true, timeout=60, tag=Javdb解锁
+# http-request ^https?:\/\/.*\/api\/v1\/(movies\/.*\/play|startup) script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javdbvipcrack.js, timeout=60, tag=Javdb
+http-request ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies\/.*\/play|startup) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js, timeout=60, tag=Javdb
+
+# ✅ 解锁青藤之恋
+http-response https?:\/\/wx-love-api\.afunapp\.com\/(proporty\/get_user_property|user\/get_user_info) script-path=https://raw.githubusercontent.com/LiJunYi2/QuantumultX/main/rewrite_rule/js/qtzl_vip.js, requires-body=true, timeout=60, tag=青藤之恋
+
 [Mitm]
-hostname = api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*
+hostname = api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, api.ujvnmkx.cn, jdforrepam.com, api.wwwuh5.cn, api.hechuangxinxi.xyz
