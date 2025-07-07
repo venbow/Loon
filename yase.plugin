@@ -1,0 +1,11 @@
+#!name=亚瑟浏览
+#!desc=解锁高级会员
+#!homepage=https://apps.apple.com/us/app/id1551893305
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0b/44/0a/0b440a88-ea43-539d-52b1-1dd8a73adf89/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/434x0w.webp
+#!author=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/yase.js
+
+[Script]
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/yase.js, requires-body=true, timeout=60, tag=yase
+
+[MITM]
+hostname = buy.itunes.apple.com
