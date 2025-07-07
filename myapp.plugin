@@ -23,9 +23,9 @@ http-response ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads)
 http-request ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies\/.*\/play|startup) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js, timeout=60, tag=Javdb
 
 # ✅ 解锁青藤之恋
-http-response https?:\/\/wx-love-api\.afunapp\.com\/(proporty\/get_user_property|user\/get_user_info) script-path=https://raw.githubusercontent.com/LiJunYi2/QuantumultX/main/rewrite_rule/js/qtzl_vip.js, requires-body=true, timeout=60, tag=青藤之恋
+http-response ^https?:\/\/wx-love-api\.afunapp\.com\/(proporty\/get_user_property|user\/get_user_info) script-path=https://raw.githubusercontent.com/LiJunYi2/QuantumultX/main/rewrite_rule/js/qtzl_vip.js, requires-body=true, timeout=60, tag=青藤之恋
 # palipali
-http-response ^https:\/\/.+akskji.com\/v\d\/user\/info script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, timeout=30, tag=palipali, argument=%22level%22%3A%5Cd-%3E%22level%22%3A1
+http-response ^https?:\/\/(apih|apiaws)\.[^\/]+\/v\d\/user\/info script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, timeout=30, tag=palipali, argument=%22level%22%3A%5Cd-%3E%22level%22%3A1
 
 [Mitm]
-hostname = *.akskji.com, api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, api.ujvnmkx.cn, jdforrepam.com, api.wwwuh5.cn, api.hechuangxinxi.xyz
+hostname = *.akskji.com, api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, *.ikj4.com, *.nimi3.shop, api.hechuangxinxi.xyz
