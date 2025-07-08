@@ -10,7 +10,17 @@ if ($request.url.indexOf(path1) != -1){
 }
 if ($request.url.indexOf(path2) != -1){
 	obj.result["vip_status"] = key;
-	obj.result["allow_guest"] = 1;
+	// obj.result["allow_guest"] = 1;
 }
 
 $done({body: JSON.stringify(obj)});
+
+/*
+var modifiedBody = $response.body; 
+var obj = JSON.parse(modifiedBody);
+obj.result.books.forEach(function (item, idnex, array) {
+    item.is_vip = 0;
+})
+modifiedBody = JSON.stringify(obj); 
+$done(modifiedBody);
+*/
