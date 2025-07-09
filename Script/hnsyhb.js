@@ -3,7 +3,7 @@ const path2 = "/v1/get_vip_info_h5";
 const path3 = "/v1/get_user_info";
 const path4 = "/v1/get_enlightening_book_info";
 
-let key = {"expire_time":7955110875,"vip_type":1,"last_product_id":"com.ihuman.book.sub.vip1y"};
+let key = {"expire_time":7955110875,"vip_type":1,"last_product_id":"com.ihuman.book.sub.vip1y", "pack_list":["com.ihuman.book.sub.vip1y"]};
 
 let obj = JSON.parse($response.body);
 
