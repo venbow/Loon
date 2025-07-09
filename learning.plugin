@@ -6,6 +6,8 @@
 #xiaobanlong
 #http-response ^https:\/\/xbl(?:pay|math|satellite)\.youban\.com script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/xbl.js, requires-body=true, timeout=60, tag=xbl
 http-response ^https:\/\/xbl(?:pay|math|satellite)\.youban\.com script-path=https://raw.githubusercontent.com/venbow/Loon/main/Script/xblong.js, requires-body=true, timeout=60, tag=xbl
+http-response ^https:\/\/(bigvip|wxxbl)\.youban\.com script-path=https://raw.githubusercontent.com/venbow/Loon/main/Script/xblong.js, requires-body=true, timeout=60, tag=xbl2
+
 #langwenjia
 http-response ^https:\/\/api\.fingerabc\.cn\/api\/(?:bookModule\/get\/bookModuleAsNew|lesson\/queryLessons|tagMaterial\/queryReaderList|tagMaterial\/queryTagData|product\/getCategoryProduct) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/lwj.js, requires-body=true, timeout=60, tag=lwj
 #Documents
