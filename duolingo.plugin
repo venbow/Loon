@@ -3,13 +3,13 @@
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Loon.png
 #!author=chenglich
 
-[Rewrite]
-^https?:\/\/ios-api-2\.duolingo\.cn\/2021-05-05\/plus-promotions\/.* - reject
-^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/users\/\d+\/sdui-shop.* - reject
-^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/users\/\d+\/subscription.* - reject
-^https?:\/\/simg-ssl\.duolingo\.com\/videos\/promo\/.* - reject
+#[Rewrite]
+#^https?:\/\/ios-api-2\.duolingo\.cn\/2021-05-05\/plus-promotions\/.* - reject
+#^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/users\/\d+\/sdui-shop.* - reject
+#^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/users\/\d+\/subscription.* - reject
+#^https?:\/\/simg-ssl\.duolingo\.com\/videos\/promo\/.* - reject
 [Script]
-http-response ^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/batch script-path=https://raw.githubusercontent.com/chenglich/qxrewrite/main/duolingo_stick_5_hearts_v2.js, requires-body=true, timeout=60, tag=duolingo
-
+# http-response ^https?:\/\/ios-api-2\.duolingo\.cn\/2023-05-23\/batch script-path=https://raw.githubusercontent.com/chenglich/qxrewrite/main/duolingo_stick_5_hearts_v2.js, requires-body=true, timeout=60, tag=duolingo_handle_heart
+http-response ^https?:\/\/ios-api-2\.duolingo\.cn\/(2017-06-30|2023-05-23)\/users\/(\d+)\/available-features script-path=https://raw.githubusercontent.com/chenglich/qxrewrite/main/duolingo/duolingo_unlock.js, requires-body=true, timeout=60, tag=duolingo
 [MITM]
-hostname = ios-api-2.duolingo.cn, simg-ssl.duolingo.com
+hostname = ios-api-2.duolingo.cn
