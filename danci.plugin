@@ -1,0 +1,15 @@
+#!name=memodanci
+#!desc=3.5.4版本词汇上限解锁
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Loon.png
+#!author=saymiss
+
+[Rewrite]
+# 去除系统检测
+^https:\/\/api\.maimemo\.com\/api\/v1\/system\/check - reject
+
+[Script]
+http-response ^https?:\/\/api\.maimemo\.com\/api\/v1/users/info script-path=https://raw.githubusercontent.com/saymiss/QxJs/879043d0ff1581449a8ec662e11986b45b63b0ef/Scripts/mmbdc.js, requires-body=true, timeout=60, tag=默默背单词
+
+[MITM]
+hostname = api.maimemo.com
+
