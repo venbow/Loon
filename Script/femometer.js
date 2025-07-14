@@ -1,13 +1,11 @@
-/***
+/*
 #!name=Femometer
 #!desc=Premium免费试用测试
-
-[Script]
-http-response https://api.bongmi.com/v1/subscription/*/status script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/femometer.js, requires-body=true, max-size=0
-
-[MITM]
-hostname = api.bongmi.com
-***/
+//[Script]
+//http-response https://api.bongmi.com/v1/subscription/*/status script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/femometer.js, requires-body=true, max-size=0
+//[MITM]
+//hostname = api.bongmi.com
+*/
 
 var body = $response.body;
 var obj = JSON.parse(body);
