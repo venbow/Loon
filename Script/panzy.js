@@ -11,8 +11,8 @@ const data = {
 	"expires_date": "2099-02-18T07:52:54Z",
 	"original_purchase_date": "2025-08-20T07:52:55Z",
 	"purchase_date": "2025-08-20T07:52:54Z",
-  "ownership_type": "PURCHASED",
-  "store": "app_store"
+    "ownership_type": "PURCHASED",
+    "store": "app_store"
 };
 
 if (typeof $response == "undefined") {
