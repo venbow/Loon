@@ -13,6 +13,7 @@ const data = {
 	"purchase_date": "2025-08-20T07:52:54Z",
     "ownership_type": "PURCHASED",
     "store": "app_store"
+	//"is_sandbox": false
 };
 
 if (typeof $response == "undefined") {
@@ -21,9 +22,10 @@ if (typeof $response == "undefined") {
 	resp.headers = $request.headers;
 } else if (obj && obj.subscriber) {
 	obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
-	obj.subscriber.entitlement = obj.subscriber.entitlement || {};
+	obj.subscriber.entitlements = obj.subscriber.entitlements || {};
 	for (const i in list) {
 		if (new RegExp(`^${i}`, `i`).test(ua)) {
+			obj.subscriber.subscriptions = {};
 			obj.subscriber.subscriptions[list[i].id] = data;
 			obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
 			obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
