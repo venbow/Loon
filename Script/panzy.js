@@ -9,7 +9,7 @@ const list = {
 };
 const data = {
     "grace_period_expires_date": null,
-    "expires_date": null
+    "expires_date": null,
     "purchase_date": "2025-08-20T07:52:54Z"
     //"ownership_type": "PURCHASED",
     //"store": "app_store"
@@ -35,7 +35,7 @@ const data2 = {
     "original_purchase_date": "2025-08-20T07:52:54Z",
     "purchase_date": "2025-08-20T07:52:54Z",
     "store": "app_store"
-}
+};
 if (typeof $response == "undefined") {
     delete $request.headers["x-revenuecat-etag"]; // prevent 304 issues
     delete $request.headers["X-RevenueCat-ETag"];
@@ -51,7 +51,7 @@ if (typeof $response == "undefined") {
             //obj.subscriber.subscriptions[list[i].id] = data;
             obj.subscriber.entitlements[list[i].name] = JSON.parse(JSON.stringify(data));
             obj.subscriber.entitlements[list[i].name].product_identifier = list[i].id;
-            obj.subscriber.original_purchase_date = "2025-08-20T07:52:54Z"
+            obj.subscriber.original_purchase_date = "2025-08-20T07:52:54Z";
             break;
         }
     }
