@@ -1,12 +1,12 @@
 #!name=端传媒
 #!desc=解锁手机APP端和网页端文章阅读权限
-#!author=Moyu
+#!author=Moyu, whisper
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Loon.png
 
 [Script]
-http-response ^https?:\/\/app\.theinitium\.com\/subs\/[a-zA-Z_]+\/verify_subscription script-path=https://github.com/ifflagged/Romeo/raw/main/Modules/JS/ddgksf2013/Duan.Vip/DuanChuanMeiProCrack.js, requires-body=true, timeout=60, tag=Duan.vip1
+http-response ^https?:\/\/app\.theinitium\.com\/subs\/[a-zA-Z_]+\/verify_subscription script-path=https://raw.githubusercontent.com/venbow/Loon/refs/heads/main/Script/Duanmedia.js, requires-body=true, timeout=60, tag=Duan.vip
 
-http-response ^https?:\/\/api\.wallkit\.net\/api\/v\d/user script-path=https://github.com/ifflagged/Romeo/raw/main/Modules/JS/ddgksf2013/Duan.Vip/DuanChuanMeiProCrack.js, requires-body=true, timeout=60, tag=Duan.vip2
+http-response ^https?:\/\/api\.wallkit\.net\/api\/v\d/user script-path=https://raw.githubusercontent.com/venbow/Loon/refs/heads/main/Script/Duanmedia.js, requires-body=true, timeout=60, tag=Duan.wallkit
 
 [MITM]
 hostname = app.theinitium.com, api.wallkit.net
