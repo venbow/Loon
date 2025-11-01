@@ -6,7 +6,7 @@
 [Script]
 http-response ^https?:\/\/app\.theinitium\.com\/subs\/[a-zA-Z_]+\/verify_subscription script-path=https://raw.githubusercontent.com/venbow/Loon/refs/heads/main/Script/Duanmedia.js, requires-body=true, timeout=60, tag=Duan.vip
 
-http-response ^https?:\/\/api\.wallkit\.net\/api\/v\d/user script-path=https://raw.githubusercontent.com/venbow/Loon/refs/heads/main/Script/Duanmedia.js, requires-body=true, timeout=60, tag=Duan.wallkit
+http-response ^https?:\/\/api\.wallkit\.net\/api\/v\d script-path=https://raw.githubusercontent.com/venbow/Loon/refs/heads/main/Script/Duanmedia.js, requires-body=true, timeout=60, tag=Duan.wallkit
 
 [MITM]
 hostname = app.theinitium.com, api.wallkit.net
