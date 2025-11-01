@@ -13,6 +13,6 @@ if (url.indexOf('user/me/subscription') !== -1) {
     $done({ body });
 } else {
     let body = $response.body;
-    body = body.replace(/state="inactive"/g, 'state="active"')
+    body = body.replace(/state="inactive"/g, 'state="active"');
     $done({ body });
 }
