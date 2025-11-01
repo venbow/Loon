@@ -14,5 +14,5 @@ if (url.indexOf('user/me/subscription') !== -1) {
 } else {
     let body = $response.body;
     body = body.replace(/state="inactive"/g, 'state="active"')
-    $done({});
+    $done({ body });
 }
