@@ -3,33 +3,53 @@
 #!author=BOBO
 #!homepage=https://github.com/BOBOLAOSHIV587/Rules
 
+[Argument]
+Picsart=switch, "false", "true", tag=解锁端Picsart, desc=
+KugouMusic=switch, "false", "true", tag=解锁酷狗音乐VIP, desc=
+PikPak=switch, "false", "true", tag=PikPak解锁, desc=
+Termius=switch, "false", "true", tag=Termius解锁, desc=
+Qingten=switch, "false", "true", tag=青藤之恋会员, desc=
+PornHub=switch, "false", "true", tag=PornHub会员, desc=
+palipali=switch, "false", "true", tag=palipali会员, desc=
+Pixiv=switch, "false", "true", tag=Pixiv会员, desc=
+Quark=switch, "false", "true", tag=夸克网盘解锁SVIP, desc=
+Xunlei=switch, "false", "true", tag=迅雷倍速播放, desc=
+
+[Rewrite]
+^http://adapi\.izuiyou\.com reject
+^https?://api-shoulei-ssl\.xunlei\.com/flowhub/v1/slots:batchGet reject
+
 [Script]
 # > Picsart美易
-# http-response ^https://api.(meiease|picsart).(cn|com)/gw-v2/shop/subscription/apple/purchases script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Picsart/JS/Picsart.js, requires-body=true, timeout=60, tag=Picsart美易解锁
+# http-response ^https://api.(meiease|picsart).(cn|com)/gw-v2/shop/subscription/apple/purchases script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Picsart/JS/Picsart.js, requires-body=true, timeout=60,tag=Picsart解锁, enable={Picsart}
 
 # > 酷狗音乐
-http-response ^https?:\/\/gateway\.kugou\.com script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/KuGouYinYue/JS/KuGou.js, requires-body=true, timeout=60, tag=酷狗音乐解锁永久Vip
+http-response ^https?:\/\/gateway\.kugou\.com script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/KuGouYinYue/JS/KuGou.js, requires-body=true, timeout=60, tag=kugou解锁, enable={KugouMusic}
 
 # > PikPak
-http-response ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubscriptionStatus)|drive\/v\d\/about\?space) script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/PikPak/JS/PikPak.js, requires-body=true, timeout=60, tag=PikPak
+http-response ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubscriptionStatus)|drive\/v\d\/about\?space) script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/PikPak/JS/PikPak.js, requires-body=true, timeout=60, tag=PikPak, enable={PikPak}
 
 # > Termius
-http-response ^https?:\/\/api\.termius\.com\/api\/v\d\/bulk\/account\/ script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Termius/JS/Termius.js, requires-body=true, timeout=60, tag=Termius解锁Premium
-
-# Javdb
-# http-response ^https?:\/\/.*\/api\/v1\/users script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javbdvipcrack.js, requires-body=true, timeout=60, tag=Javdb解锁
-http-response ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(users|startup|ads) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js, requires-body=true, timeout=60, tag=Javdb解锁
-# http-request ^https?:\/\/.*\/api\/v1\/(movies\/.*\/play|startup) script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javdbvipcrack.js, timeout=60, tag=Javdb
-http-request ^https?:\/\/api\.hechuangxinxi\.xyz\/api\/v\d\/(movies\/.*\/play|startup) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/JavDB.js, timeout=60, tag=Javdb
+http-response ^https?:\/\/api\.termius\.com\/api\/v\d\/bulk\/account\/ script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Termius/JS/Termius.js, requires-body=true, timeout=60, tag=Termius解锁Premium, enable={Termius}
 
 # 青藤之恋
-http-response ^https?:\/\/wx-love-api\.afunapp\.com\/(proporty\/get_user_property|user\/get_user_info) script-path=https://raw.githubusercontent.com/LiJunYi2/QuantumultX/main/rewrite_rule/js/qtzl_vip.js, requires-body=true, timeout=60, tag=青藤之恋
+http-response ^https?:\/\/wx-love-api\.afunapp\.com\/(proporty\/get_user_property|user\/get_user_info) script-path=https://raw.githubusercontent.com/LiJunYi2/QuantumultX/main/rewrite_rule/js/qtzl_vip.js, requires-body=true, timeout=60, tag=青藤之恋, enable={Qingten}
+
+# > PornHub Unlock Premium
+http-request ^https?:\/\/cn\.pornhubpremium\.com\/ script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/PornHubPremium/JS/PornHubPremiumCrack.js, timeout=60, tag=PornHubPremiumCrack, enable={PornHub}
 
 # palipali
-http-response ^https?:\/\/(apih|apiaws)\.[^\/]+\/v\d\/user\/info script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, timeout=30, tag=palipali, argument=%22level%22%3A%5Cd-%3E%22level%22%3A1
+http-response ^https?:\/\/(apih|apiaws)\.[^\/]+\/v\d\/user\/info script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, timeout=30, tag=palipali, enable={palipali}
 
 # Pixiv Premium
-http-response ^https:\/\/oauth\.secure\.pixiv\.net\/auth\/token script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Pixiv/JS/pixiv_premium.min.js, requires-body=true, tag=pixiv
+http-response ^https:\/\/oauth\.secure\.pixiv\.net\/auth\/token script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Pixiv/JS/pixiv_premium.min.js, requires-body=true, tag=pixiv, enable={Pixiv}
+
+# > 夸克网盘 解锁SVIP
+http-response ^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Quark/JS/Quark.js, requires-body=true, timeout=60, tag=夸克网盘解锁SVIP, enable={Quark}
+
+# > 迅雷Unlock 倍速播放、去广告解锁VIP
+http-response ^https?:\/\/.+.xunlei.com\/(drive\/v1\/files|xluser.core.login\/v3\/getuserinfo) script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Xunlei/JS/xunlei.js, requires-body=true, timeout=60, tag=迅雷Unlock, enable={Xunlei}
+
 
 [Mitm]
-hostname = oauth.secure.pixiv.net, *.akskji.com, api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, *.ikj4.com, *.nimi3.shop, api.hechuangxinxi.xyz
+hostname = *xunlei.com, api-shoulei-ssl.xunlei.com, drive*.quark.cn, cn.pornhubpremium.com, oauth.secure.pixiv.net, *.akskji.com, api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, *.ikj4.com, *.nimi3.shop, api.hechuangxinxi.xyz
