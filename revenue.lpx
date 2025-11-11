@@ -1,0 +1,16 @@
+#!name = RevenueCat测试
+#!desc = RevenueCat系列解锁测试
+#!openUrl = 
+#!author = chxm1023[https://github.com/chxm1023]
+#!tag = 解锁会员
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
+
+[Argument]
+chxm1023 = switch, true, false, tag =叮当猫chxm1023, desc =
+
+[Script]
+http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/venbow/Loon/main/Script/test.js, requires-body = true, tag = Revenue会员解锁, enable={chxm1023}
+http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/venbow/Loon/main/Script/test.js, requires-body = false, tag = Revenue会员解锁, enable={chxm1023}
+
+[MitM]
+hostname = api.revenuecat.com, api.rc-backup.com
