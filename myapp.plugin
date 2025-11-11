@@ -52,8 +52,9 @@ http-response ^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribu
 # > 迅雷Unlock 倍速播放、去广告解锁VIP
 http-response ^https?:\/\/.+.xunlei.com\/(drive\/v1\/files|xluser.core.login\/v3\/getuserinfo) script-path=https://raw.githubusercontent.com/BOBOLAOSHIV587/Rules/main/JS/Xunlei/JS/xunlei.js, requires-body=true, timeout=60, tag=迅雷Unlock, enable={Xunlei}
 
-http-response ^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ https://raw.githubusercontent.com/chxm1023/Rewrite/main/apphud.js, requires-body=true, timeout=60, tag=AppHubUnlock, enable={AppHub}
+http-response ^https?:\/\/.*\.apphud\.com\/v\d\/(subscriptions|customers)$ script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/apphud.js, requires-body=true, timeout=60, tag=AppHubUnlock, enable={AppHub}
 
-http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=AdaptyUnlock, enable={Adapty}
+http-response ^https?:\/\/api\.adapty\.io\/api\/v\d\/sdk\/(analytics\/profiles|in-apps\/(apple\/receipt\/validate|purchase-containers)|purchase\/app-store) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/adapty.js, requires-body=true, timeout=60, tag=AdaptyUnlock, enable={Adapty}
+
 [Mitm]
 hostname = api.adapty.io, *.apphud.com, *xunlei.com, api-shoulei-ssl.xunlei.com, drive*.quark.cn, cn.pornhubpremium.com, oauth.secure.pixiv.net, *.akskji.com, api.termius.com, api-drive.mypikpak.com, api.meiease.*, api.picsart.*, wx-love-api.afunapp.com, *.ikj4.com, *.nimi3.shop, api.hechuangxinxi.xyz
