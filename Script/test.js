@@ -53,6 +53,10 @@ const bundle = {
 };
 
 const listua = {
+  'BeetleADB': { name: 'beetle_pro', id: 'beetle_lifetime_pro', cm: 'sjc' },
+  'Habitor': { name: 'premium', id: 'habitor_lifetime', cm: 'sjb' },
+  'adbTools': { name: 'pro_lifetime', id: 'com.jy.adbTools.pro_1', cm: 'sjb' },
+  'Quitzilla': { name: 'premium', id: 'com.despdevs.quitzilla.sub1y', cm: 'sja' },
   'G%20E%20I%20S%20T': { name: 'memorado_premium', id: 'com.memorado.subscription.yearly.v1', cm: 'sja' },
   'Panzy': { name: 'PanzySubscriptions', id: 'panzy.lifetime', cm: 'sjb' },
   'knowme-storage': { name: 'pro', id: 'pro', cm: 'sjb' },  //知我记物
