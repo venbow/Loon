@@ -53,6 +53,7 @@ const bundle = {
 };
 
 const listua = {
+  'G%20E%20I%20S%20T': { name: 'memorado_premium', id: 'com.memorado.subscription.yearly.v1', cm: 'sja' },
   'Panzy': { name: 'PanzySubscriptions', id: 'panzy.lifetime', cm: 'sjb' },
   'knowme-storage': { name: 'pro', id: 'pro', cm: 'sjb' },  //知我记物
   'GrowthPath': { name: 'Premium', id: 'GrowthPath_IAP_Lifetime', cm: 'sjb' },  //习惯记
