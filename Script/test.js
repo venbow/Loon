@@ -53,12 +53,15 @@ const bundle = {
 };
 
 const listua = {
+  'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time_l', cm: 'sjb' },
+  'Percento': { name: 'premium', id: 'app.percento.premium.168.lifetime', cm: 'sjb' },
+  'ShouChong': { name: 'lulemevip', id: 'lulemeYears', cm: 'sja' }, 
   'BeetleADB': { name: 'beetle_pro', id: 'beetle_lifetime_pro', cm: 'sjc' },
   'Habitor': { name: 'premium', id: 'habitor_lifetime', cm: 'sjb' },
   'adbTools': { name: 'pro_lifetime', id: 'com.jy.adbTools.pro_1', cm: 'sjb' },
   'Quitzilla': { name: 'premium', id: 'com.despdevs.quitzilla.sub1y', cm: 'sja' },
   'G%20E%20I%20S%20T': { name: 'memorado_premium', id: 'com.memorado.subscription.yearly.v1', cm: 'sja' },
-  'Panzy': { name: 'PanzySubscriptions', id: 'panzy.lifetime', cm: 'sjb' },
+  //'Panzy': { name: 'PanzySubscriptions', id: 'panzy.lifetime', cm: 'sjb' },
   'knowme-storage': { name: 'pro', id: 'pro', cm: 'sjb' },  //知我记物
   'GrowthPath': { name: 'Premium', id: 'GrowthPath_IAP_Lifetime', cm: 'sjb' },  //习惯记
   'Awake': { name: 'awake_pro', id: 'io.unorderly.awake.pro.lifetime_v1', cm: 'sjb' },  //Awake-智能闹钟
