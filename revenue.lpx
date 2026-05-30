@@ -3,7 +3,6 @@
 #!openUrl = 
 #!author = chxm1023[https://github.com/chxm1023]
 #!tag = 解锁会员
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
 
 [Argument]
 chxm1023 = switch, true, false, tag =叮当猫chxm1023, desc =
