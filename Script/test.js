@@ -22,7 +22,7 @@ let obj = {}, ddm = JSON.parse(typeof $response != "undefined" && $response.body
 
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-const forbiddenApps = []; //'Rond', 'Filebar', 'Fileball', 'APTV'
+const forbiddenApps = ['PicSeedClient', 'ReflixiOS', 'Pomodoro', 'MyHabit', 'Rond', 'Filebar', 'Fileball', 'APTV']; //'Rond', 'Filebar', 'Fileball', 'APTV'
 if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $request.body.includes(app)))) {
   console.log("⛔️检测到禁止 MITM 的 APP，脚本停止运行！");
   $done({});
@@ -55,6 +55,18 @@ const bundle = {
 };
 
 const listua = {
+  'weight': { name: 'Weight Pro', id: 'weight.pro.lifetime', cm: 'sjb' },  //体重小本
+  'QuietCam': { name: 'QuietCam Pro', id: 'pawelchmiel.quietcam.yearly', cm: 'sja' },  //隐形相机/黑屏录像-QuietCam
+  'PixelStudio': { name: 'Pro', id: 'PixelNFT.Pro.Lifetime', cm: 'sjb' },  //像素艺术-Pixel Canvas
+  'OrbitFast': { name: 'Orbit Fast Full', id: 'com.fastorbitapps.OrbitFast.premium.lifetime', cm: 'sjb' },  //OrbitFast
+  'Mojo': { name: 'pro_ai', id: 'video.mojo.pro.ai.yearly', cm: 'sja' },  //Mojo:AI视频和Reels编辑器
+  'VidCap': { name: 'io.fadel.vidcap.pro', id: 'io.fadel.vidcap.pro.lifetime', cm: 'sjc' },  //VidCap-视频字幕生成器
+  'kiddztube': { name: 'Subscriber', id: 'kidsbeetv.lifetime.subscription.ios', cm: 'sjc' },  //KidsBeeTV 少儿英语启蒙动画
+  'tetrify': { name: 'pro', id: 'pro_early_lifetime', cm: 'sjb' },  //tetrify:给自己发信息做笔记
+  'ObjectRemoval': { name: 'Pro', id: 'ObjectRemoval.Lifetime', cm: 'sjc' },  //狗狗橡皮擦
+  'TheGreatMe': { name: 'The Great Me Pro', id: 'thegreatme.forever', cm: 'sjc' },  //伟大的我: 重启人生计划
+  'Leica%20LUX': { name: 'pro', id: 'annual_subscribers_first_cohort', cm: 'sja' },  //LeicaLUX-徕卡相机
+  'ai_music_generator': { name: 'music_generation_yearly_79_99', id: 'music_generation_yearly_79_99', cm: 'sja' },  //Musicia-AI音乐
   'Loopsie': { name: 'pro-iOS', id: 'com.gamelounge.loopsie.ios.one_time_l', cm: 'sjb' },
   'Percento': { name: 'premium', id: 'app.percento.premium.168.lifetime', cm: 'sjb' },
   'ShouChong': { name: 'lulemevip', id: 'lulemeYears', cm: 'sja' }, 
