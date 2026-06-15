@@ -22,13 +22,14 @@ let obj = {}, ddm = JSON.parse(typeof $response != "undefined" && $response.body
 
 const headers = $request.headers, ua = headers['User-Agent'] || headers['user-agent'], bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-const forbiddenApps = ['PicSeedClient', 'ReflixiOS', 'Pomodoro', 'MyHabit', 'Rond', 'Filebar', 'Fileball', 'APTV']; //'Rond', 'Filebar', 'Fileball', 'APTV'
+const forbiddenApps = ['PicSeedClient', 'ReflixiOS', 'Pomodoro', 'MyHabit', 'Rond', 'APTV']; //'Rond', 'Filebar', 'Fileball', 'APTV'
 if (forbiddenApps.some(app => (ua && ua.includes(app)) || ($request.body && $request.body.includes(app)))) {
   console.log("⛔️检测到禁止 MITM 的 APP，脚本停止运行！");
   $done({});
 }
 
 const bundle = {
+  'me.shuifeng.Filebox': { name: 'filebox_pro', id: 'com.filebox.premium', cm: 'sjb' },
   'com.zhang333.dd': { name: 'premium', id: 'com.zhang3.plus', cm: 'sjb' },  //系统电池分析
   'io.fadel.TeleprompterX': { name: 'io.fadel.teleprompterx.pro', id: 'io.fadel.TeleprompterX.pro.lifetime', cm: 'sjb' },  //Teleprompter-提词器和字幕
   'com.flexicalc.app': { name: 'pro', id: 'pro_product', cm: 'sja' },  //灵活计算器
